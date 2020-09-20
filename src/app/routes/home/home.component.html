@@ -1,1 +1,31 @@
 <app-toolbar></app-toolbar>
+<div class="content">
+  <app-renderer [words]="renderOutput"></app-renderer>
+  <div class="spacer"></div>
+  <div class="button-row">
+    <!-- TODO Fix Buttons -->
+    <button mat-stroked-button (click)="play()" color="primary" *ngIf="isPaused || !inProgress" [disabled]="!input.getRawValue().words">Play</button>
+    <button mat-button (click)="pause()" color="primary" *ngIf="inProgress && !isPaused">Pause</button>
+    <button mat-button (click)="stop()" color="warn" *ngIf="inProgress">Stop</button>
+  </div>
+  <form [formGroup]="input">
+    <mat-form-field appearance="outline" class="words">
+      <mat-label>Enter Text Here</mat-label>
+      <textarea [disabled]="inProgress" matInput placeholder="Ex. It was a dark and stormy night..." formControlName="words"></textarea>
+    </mat-form-field>
+    <div class="row">
+      <mat-form-field appearance="outline" class="wpm">
+        <mat-label>Words per Minute</mat-label>
+        <input type="number" matInput formControlName="wpm" [disabled]="inProgress">
+      </mat-form-field>
+      <div class="mode">
+        <mat-label>Display Mode</mat-label>
+        <mat-radio-group formControlName="mode" [disabled]="inProgress" color="primary">
+          <mat-radio-button [value]="0">Normal</mat-radio-button>
+          <mat-radio-button [value]="1">In New Window</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </form>
+  
+</div>

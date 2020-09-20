@@ -1,0 +1,6 @@
+<div class="renderer">
+  <h2 class="before" [style.visibility]="words.previous ? 'visible' : 'hidden'">{{ words.previous }}</h2>
+  <h1 class="mat-display-4 desktopOnly" [style.visibility]="!!words.current ? 'visible' : 'hidden'">{{ words.current }}</h1>
+  <h1 class="mat-display-3 mobileOnly" [style.visibility]="!!words.current ? 'visible' : 'hidden'">{{ words.current }}</h1>
+  <h2 class="after" [style.visibility]="!!words.next ? 'visible' : 'hidden'">{{ words.next }}</h2>
+</div>

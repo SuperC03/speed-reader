@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  // TODO Theme Switching and About Model
   constructor() { }
 
   ngOnInit(): void {

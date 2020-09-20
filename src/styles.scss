@@ -36,18 +36,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .mobileOnly {
-  display: none;
+  display: none !important;
 }
 .desktopOnly {
-  display: block;
+  display: block !important;
 }
 
 // Hide on Mobile
 @media only screen and (max-width: 600px) {
   .mobileOnly {
-    display: block;
+    display: block !important;
   }
   .desktopOnly {
-    display: none;
+    display: none !important;
   }
 }
