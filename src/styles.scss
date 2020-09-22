@@ -17,9 +17,8 @@ $speed-reader-warn: mat-palette($mat-red);
 $light-theme: mat-light-theme($speed-reader-primary, $speed-reader-accent, $speed-reader-warn);
 $dark-theme: mat-dark-theme($speed-reader-primary, $speed-reader-accent, $speed-reader-warn);
 
-.light-theme {
-  @include angular-material-theme($light-theme);
-}
+
+@include angular-material-theme($light-theme);
 
 .dark-theme {
   @include angular-material-color($dark-theme);
@@ -28,10 +27,6 @@ $dark-theme: mat-dark-theme($speed-reader-primary, $speed-reader-accent, $speed-
 // Global Styles
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-* {
-  transition: color 0.5s, background-color 0.5s;
-}
 
 ::-webkit-scrollbar {
   width: 0px;
